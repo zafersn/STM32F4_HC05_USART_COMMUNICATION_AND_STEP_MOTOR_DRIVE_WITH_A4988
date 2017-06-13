@@ -1,8 +1,9 @@
 STM32F407 üzerinde hc05 bluetooth modülü ile usart haberleşmesi üzerinden android telefon ile haberleştirildi. Burada paylaşılan kodlarda sadece android üzerinden step moturun yön kontrolü yapılmaktadır.
 Bu kaynak oluşturulurken STM32 CubeMX ile HAL kütüphaneleri oluşturuldu ve kullanıldı.
 CubeMX üzerinde timer ayarları yapıldı. Step motor için timer hesaplanırken aşağıdaki formuller kullanıldı.
+<br>
 [
-Example TIM2:
+**Example TIM2:
 
 Goal: Set TIM2 to 1khz(1ms) interrupt
 
@@ -23,7 +24,7 @@ tim_frequency = timer_tick_frequency / (TIM_Period + 1)
  TIM_Period = 999
 Result: If you set prescaller to 83 and period to 99, you will get 1khz (1ms) interrupt.
 
-KAYNAK: http://cerdemir.com/timers-in-stm32f4-discovery/
+KAYNAK: http://cerdemir.com/timers-in-stm32f4-discovery/**
 
 ]
 

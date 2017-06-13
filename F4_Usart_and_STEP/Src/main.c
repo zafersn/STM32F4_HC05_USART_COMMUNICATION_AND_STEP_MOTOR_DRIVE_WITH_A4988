@@ -94,11 +94,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM2) {
-		if (b % 2 == 0) {
+		//if (b % 2 == 0) {
 			HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_1);
-			b=0;
-		}
-		b++;
+		//	b=0;
+		//}
+	//	b++;
 	}
 
 }
@@ -229,7 +229,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 41;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 499;
+  htim2.Init.Period = 999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
   {

@@ -13,16 +13,16 @@ TIM2 is connected to APB1 so it’s max clock is SysClk/2 (42mhz)
 First calculate timer tick frequency :
 Down timer 1mhz with prescaler
 
-timer_tick_frequency = Timer_default_frequency / (prescaller_set + 1)
- 1000000 = 42000000 / (prescaller_set + 1)
- prescaller = 41
+**timer_tick_frequency = Timer_default_frequency / (prescaller_set + 1)**
+** 1000000 = 42000000 / (prescaller_set + 1)**
+** prescaller = 41**
 Second calculate timer period:
 Down timer 1khz with timer period
 
-tim_frequency = timer_tick_frequency / (TIM_Period + 1)
- 2000 = 1000000 /(TIM_Period +1)
- TIM_Period = 1000000 / 1000 - 1
- TIM_Period = 999
+**tim_frequency = timer_tick_frequency / (TIM_Period + 1)**
+ **2000 = 1000000 /(TIM_Period +1)**
+ **TIM_Period = 1000000 / 1000 - 1**
+ **TIM_Period = 999**
 Result: If you set prescaller to 83 and period to 99, you will get 1khz (1ms) interrupt.
 
 **KAYNAK: http://cerdemir.com/timers-in-stm32f4-discovery/**

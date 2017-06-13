@@ -15,7 +15,7 @@ Down timer 1mhz with prescaler
  <br>
 **timer_tick_frequency = Timer_default_frequency / (prescaller_set + 1)** <br>
 **1000000 = 42000000 / (prescaller_set + 1)**
-** prescaller = 41** <br>
+**prescaller = 41** <br>
 Second calculate timer period:
 Down timer 1khz with timer period
 
